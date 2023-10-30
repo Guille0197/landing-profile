@@ -19,7 +19,7 @@ const ServicesItem = ({
       )}
     >
       <div>
-        <Image src={icon} alt={title} width={40} height={40} />
+        <Image src={icon} alt={title} width={40} height={40} unoptimized/>
       </div>
       <div className={clsx("space-y-2", className)}>
         <h5 className="text-base dark:text-neutral-800  md:text-lg font-medium">
