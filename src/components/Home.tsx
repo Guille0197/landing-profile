@@ -12,6 +12,7 @@ import Footer from "@/common/components/Footer";
 import DarkMode from "./DarkMode";
 import Feedback from "./Feedback";
 import Skills from "./Skills";
+import { appWithTranslation } from "next-i18next";
 
 const Home = () => {
   return (
@@ -41,4 +42,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default appWithTranslation<any>(Home);

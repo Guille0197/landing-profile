@@ -2,7 +2,6 @@
 
 import PageWrapper from "@/common/components/PageWrapper";
 import Home from "@/modules";
-import { appWithTranslation } from "next-i18next";
 import { useEffect } from "react";
 import i18n from "../../i18n";
 
@@ -19,4 +18,4 @@ const HomePage = () => {
   );
 };
 
-export default appWithTranslation(HomePage);
+export default HomePage;

@@ -20,11 +20,11 @@ const Feedback = () => {
       >
         <p className="text-left max-w-screen-md mx-auto mb-3 font-normal text-gray-700 dark:text-gray-500 italic tracking-tight">
           <span className="px-1 text-left text-2xl font-bold text-gray-900 dark:text-gray-600">
-            "
+          &quot;
           </span>
           {t("feedbackClient")}
           <span className="px-1 text-right text-2xl font-bold text-gray-900 dark:text-gray-600">
-            "
+          &quot;
           </span>
         </p>
 

@@ -1,5 +1,6 @@
 import { useTranslation } from "next-i18next";
 import { PiWrenchDuotone } from "react-icons/pi";
+import NextImage from "next/image";
 
 const skills = [
   {
@@ -80,7 +81,7 @@ const Skills = () => {
                   key={index}
                   className="flex flex-col items-center justify-center gap-1"
                 >
-                  <img
+                  <NextImage
                     src={getImgUrl(skill.icon)}
                     alt={skill.name}
                     className="w-11 h-12 select-none"
