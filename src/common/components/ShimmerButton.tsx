@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { CSSProperties, ReactNode } from "react";
+import { CSSProperties, ReactNode, useEffect, useState } from "react";
 
 interface ShimmerButtonProps {
   shimmerColor?: string;
@@ -24,14 +24,21 @@ export const ShimmerButton = ({
   type = "primary",
   ...props
 }: ShimmerButtonProps) => {
+  const [shouldAnimateShimmer, setShouldAnimateShimmer] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setShouldAnimateShimmer(window.innerWidth >= 1024);
+    }
+  }, []);
   return (
     <button
       style={
         {
-          "--spread": "90deg",
+          "--spread": shouldAnimateShimmer ? "90deg" : "",
           "--shimmer-color": shimmerColor,
           "--radius": borderRadius,
-          "--speed": shimmerDuration,
+          "--speed": shouldAnimateShimmer ? shimmerDuration : "",
           "--cut": shimmerSize,
           "--bg": background,
         } as CSSProperties
@@ -56,8 +63,8 @@ export const ShimmerButton = ({
 
       {/* backdrop */}
       <div className="absolute [background:var(--bg)] [border-radius:var(--radius)] [inset:var(--cut)]" />
-      {/* content */}
 
+      {/* content */}
       <div className="relative z-10 flex items-center justify-center text-lg font-semibold text-white pointer-events-none md:text-xl">
         {children}
       </div>

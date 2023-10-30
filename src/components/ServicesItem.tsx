@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import Image from "@/common/components/Image";
 import { ServicesProps } from "@/common/types/services";
+import { useTranslation } from "next-i18next";
 
 const ServicesItem = ({
   title,
@@ -8,6 +9,7 @@ const ServicesItem = ({
   icon,
   className,
 }: ServicesProps) => {
+  const { t } = useTranslation("translation");
   return (
     <div
       className={clsx(
@@ -21,9 +23,11 @@ const ServicesItem = ({
       </div>
       <div className={clsx("space-y-2", className)}>
         <h5 className="text-base dark:text-neutral-800  md:text-lg font-medium">
-          {title}
+          {t(title)}
         </h5>
-        <p className="text-neutral-600 text-sm md:text-base">{description}</p>
+        <p className="text-neutral-600 text-sm md:text-base">
+          {t(description)}
+        </p>
       </div>
     </div>
   );

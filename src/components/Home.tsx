@@ -1,5 +1,6 @@
 "use client";
 
+import { ThemeProvider } from "next-themes";
 import BreakLine from "@/common/components/BreakLine";
 import ButtonLink from "./ButtonLink";
 import ChitChat from "./ChitChat";
@@ -9,13 +10,17 @@ import Services from "./Services";
 import Contact from "./Contact";
 import Footer from "@/common/components/Footer";
 import DarkMode from "./DarkMode";
-import { ThemeProvider } from "next-themes";
 import Feedback from "./Feedback";
+import Skills from "./Skills";
 
 const Home = () => {
   return (
-    <ThemeProvider defaultTheme="system" attribute="class" themes={["dark"]}>
-      <div className="p-6 mb-2 space-y-6" data-aos="fade-down">
+    <ThemeProvider defaultTheme="system" attribute="class">
+      <div
+        className="p-6 mb-2 space-y-6"
+        data-aos="fade-down"
+        data-aos-duration="500"
+      >
         <DarkMode />
         <Hero />
         <Socials />
@@ -25,6 +30,8 @@ const Home = () => {
         <Services />
         <BreakLine />
         <Feedback />
+        <BreakLine />
+        <Skills />
         <BreakLine />
         <Contact />
         <BreakLine />

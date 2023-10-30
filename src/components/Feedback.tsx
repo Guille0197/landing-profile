@@ -1,21 +1,28 @@
+import { useTranslation } from "next-i18next";
 import { PiChatCircleDotsDuotone as Comments } from "react-icons/pi";
 import { SiUpwork as Upwork } from "react-icons/si";
 
 const Feedback = () => {
+  const { t } = useTranslation("translation");
   return (
     <div className="space-y-4">
       <div className="flex items-center gap-2 px-3">
         <Comments size={24} />
-        <h2 className="font-medium text-lg md:text-xl">Client Feedback</h2>
+        <h2 className="font-medium text-lg md:text-xl">
+          {t("feedbackTitleSection")}
+        </h2>
       </div>
 
-      <div className="p-6 bg-white border rounded-xl shadow transition-all duration-300 hover:shadow hover:scale-105">
+      <div
+        className="p-6 bg-white border rounded-xl shadow transition-all duration-300 hover:shadow hover:scale-105"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
         <p className="text-left max-w-screen-md mx-auto mb-3 font-normal text-gray-700 dark:text-gray-500 italic tracking-tight">
           <span className="px-1 text-left text-2xl font-bold text-gray-900 dark:text-gray-600">
             "
           </span>
-          Guillermo was very communicative and gets the job done. He is willing
-          to learn and also give thoughtful suggestions.
+          {t("feedbackClient")}
           <span className="px-1 text-right text-2xl font-bold text-gray-900 dark:text-gray-600">
             "
           </span>
@@ -76,9 +83,10 @@ const Feedback = () => {
           </div>
           <a
             href="https://www.upwork.com/freelancers/~01ca2bbe18b62bfa62?viewMode=1"
+            target="_blank"
             className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none dark:bg-blue-700 dark:hover:bg-blue-800"
           >
-            Read more
+            {t("viewMore")}
             <svg
               className="w-3.5 h-3.5 ml-2"
               aria-hidden="true"
