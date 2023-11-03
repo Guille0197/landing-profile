@@ -15,7 +15,7 @@ const Hero = () => {
         data-aos-duration="1000"
       >
         <Image
-          src="/images/profilePhoto.jpeg"
+          src="./images/profilePhoto.jpeg"
           alt={t("name")}
           width={100}
           height={100}

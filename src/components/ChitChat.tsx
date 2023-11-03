@@ -21,7 +21,7 @@ const ChitChat = () => {
           <div className="flex items-center gap-2 text-base md:text-lg font-medium">
             <span>{t("titleChit")}</span>
             <Image
-              src="/images/dot_new_animated.svg"
+              src="./images/dot_new_animated.svg"
               alt="new"
               width={40}
               height={40}
