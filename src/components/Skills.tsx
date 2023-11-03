@@ -5,51 +5,51 @@ import Image from "@/common/components/Image";
 const skills = [
   {
     name: "HTML",
-    icon: "html.svg",
+    icon: "./html.svg",
   },
   {
     name: "CSS",
-    icon: "css.svg",
+    icon: "./css.svg",
   },
   {
     name: "JavaScript",
-    icon: "javascript.svg",
+    icon: "./javascript.svg",
   },
   {
     name: "React",
-    icon: "react.svg",
+    icon: "./react.svg",
   },
   {
     name: "Angular",
-    icon: "angular.svg",
+    icon: "./angular.svg",
   },
   {
     name: "Tailwind",
-    icon: "tailwind.svg",
+    icon: "./tailwind.svg",
   },
   {
     name: "Git",
-    icon: "git.svg",
+    icon: "./git.svg",
   },
   {
     name: "Next.js",
-    icon: "nextjs.svg",
+    icon: "./nextjs.svg",
   },
   {
     name: "R N",
-    icon: "react-native.svg",
+    icon: "./react-native.svg",
   },
   {
     name: "Ionic",
-    icon: "ionic.svg",
+    icon: "./ionic.svg",
   },
   {
     name: "node.js",
-    icon: "nodejs.svg",
+    icon: "./nodejs.svg",
   },
   {
     name: "TypeScript",
-    icon: "typescript.svg",
+    icon: "./typescript.svg",
   },
 ];
 
@@ -85,7 +85,7 @@ const Skills = () => {
                     src={getImgUrl(skill.icon)}
                     alt={skill.name}
                     className="w-11 h-12 select-none"
-                    width={40} 
+                    width={40}
                     height={40}
                     unoptimized
                   />
