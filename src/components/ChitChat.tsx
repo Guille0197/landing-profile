@@ -10,7 +10,7 @@ const ChitChat = () => {
 
   return (
     <Link
-      href="https://cal.com/rick/get-rick-rolled"
+      href="https://cal.com/guillermo-navarro"
       target="_blank"
       data-aos="zoom-in-up"
       data-aos-duration="1000"

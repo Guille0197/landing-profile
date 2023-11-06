@@ -1,7 +1,7 @@
 "use client";
 
 import { Dropdown } from "flowbite-react";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "next-i18next";
 
 type Language = {
@@ -13,7 +13,7 @@ type Language = {
 const LanguageItem: React.FC<{ data: Language }> = ({ data }) => {
   return (
     <div className={"flex items-center"}>
-      <span className={`fi fi-${data.flag} w-5 h-5 mr-2 rounded-full`}></span>
+      <span className={`fi fi-${data.flag} h-4 w-4 rounded-full mr-2`}></span>
       <span className="text-sm text-gray-500 dark:text-gray-400">
         {data.name}
       </span>
@@ -24,16 +24,20 @@ const LanguageItem: React.FC<{ data: Language }> = ({ data }) => {
 const LanguageSelector = () => {
   const { i18n } = useTranslation();
   const [selectedLanguage, setSelectedLanguage] = useState("en");
+  const [scrollToTop, setScrollToTop] = useState(false);
 
-  const goToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
+  useEffect(() => {
+    if (scrollToTop) {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+      setScrollToTop(false);
+    }
+  }, [scrollToTop]);
 
   const handleChangeLanguage = (language: string) => {
-    goToTop();
+    setScrollToTop(true);
     i18n.changeLanguage(language);
     setSelectedLanguage(language);
   };

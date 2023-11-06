@@ -1,12 +1,10 @@
 import { SocialItemProps } from "../types/socials";
-import { BiAt as Threadsicon } from "react-icons/bi";
 import {
   BsGithub as GithubIcon,
-  BsInstagram as InstagramIcon,
   BsLinkedin as LinkedinIcon,
-  BsRssFill as BlogIcon,
-  BsTwitter as Twittericon,
 } from "react-icons/bs";
+import { RiTwitterXLine as Twittericon } from "react-icons/ri";
+import { FiMail as EmailIcon } from "react-icons/fi";
 
 const iconSize = 20;
 
@@ -39,12 +37,12 @@ export const SOCIAL_MEDIA: SocialItemProps[] = [
     className: "hover:text-black dark:text-slate-950 dark:hover:bg-slate-200",
   },
   {
-    title: "Instagram",
-    href: "https://www.instagram.com/gan01_97/",
-    icon: <InstagramIcon size={iconSize} />,
+    title: "Mail",
+    href: "mailto:gnavarro0197@gmail.com",
+    icon: <EmailIcon size={iconSize} />,
     isShow: true,
     isExternal: true,
-    eventName: "Social: Instagram",
+    eventName: "Social: mail",
     className: "hover:text-black dark:text-slate-950 dark:hover:bg-slate-200",
   },
 ];
