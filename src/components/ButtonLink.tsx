@@ -29,7 +29,9 @@ const ButtonLink = () => {
   // const [isBottomSheetOpen, setBottomSheetOpen] = useState<boolean>(false);
 
   const handleClick = () => {
-    console.log("link portfolio... [W.I.P]");
+    alert(
+      "⚠️ Website Under Construction ⚠️\n\nWe apologize for any inconvenience. Our website is currently under construction."
+    );
   };
 
   return (
