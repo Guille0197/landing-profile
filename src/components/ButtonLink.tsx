@@ -63,7 +63,7 @@ const ButtonLink = () => {
         <ShimmerButton
           className="py-3 px-5"
           size="large"
-          onClick={() => handleClick()}
+          onClick={() => window.open("https://guille0197.github.io/portafolio/", "_blank")}
         >
           <RocketIcon size={20} className="mr-3" />
           {t("buttonBioText")}
